@@ -1,32 +1,39 @@
 import React,{useState} from 'react'
 
-export default function About() {
+export default function About(props) {
 
-    const[myStyle,setMyStyle] = useState({
-        color: "black",
-        backgroundColor: "white"
-    });
-    const[btntext,setBtnText] = useState("Enable Dark Mode");
-    const handleToDarkMode = () =>{
-       if(myStyle.color === "black"){
-        setMyStyle({
-            color: "white",
-            backgroundColor: "black"
-        });
-        setBtnText("Enable Light Mode");
-       }
-       else{
-        setMyStyle({
-            color: "black",
-            backgroundColor: "white"
-        });
-        setBtnText("Enable Dark Mode");
-       }
-    }
+  //For use state class
+    // const[myStyle,setMyStyle] = useState({
+    //     color: "black",
+    //     backgroundColor: "white"
+    // });
+    // const[btntext,setBtnText] = useState("Enable Dark Mode");
+    // const handleToDarkMode = () =>{
+    //    if(myStyle.color === "black"){
+    //     setMyStyle({
+    //         color: "white",
+    //         backgroundColor: "black"
+    //     });
+    //     setBtnText("Enable Light Mode");
+    //    }
+    //    else{
+    //     setMyStyle({
+    //         color: "black",
+    //         backgroundColor: "white"
+    //     });
+    //     setBtnText("Enable Dark Mode");
+    //    }
+    // }
+
+
     // let myStyle = {
     //      color: "white",
     //      backgroundColor: "black"
     // }
+    let myStyle = {
+         color: props.mode==="dark"?"white":"black",
+         backgroundColor: props.mode==="dark"?"#3c3c3c":"white",
+    }
 
   return (
     <>
@@ -66,7 +73,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="accordion-item">
+          <div className="accordion-item" style={myStyle}>
             <h2 className="accordion-header" id="headingTwo">
               <button
                 className="accordion-button collapsed"
@@ -99,7 +106,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="accordion-item">
+          <div className="accordion-item" style={myStyle}>
             <h2 className="accordion-header" id="headingThree">
               <button
                 className="accordion-button collapsed"
@@ -133,9 +140,9 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="container">
+        {/* <div className="container">
         <button className="btn btn-primary my-3" onClick={handleToDarkMode}>{btntext}</button>
-      </div>
+      </div> */}
       </div>
      
     </>

@@ -7,8 +7,9 @@ const capitalize = (word) =>{
 };
 
   return (
-    props.alert && <>
-  
+    <div style={{height:"60px"}}>
+    {props.alert && <>
+
       <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
         <strong>{capitalize(props.alert.type)}</strong> : {props.alert.message}
         <button
@@ -18,7 +19,8 @@ const capitalize = (word) =>{
           aria-label="Close"
         ></button>
       </div>
-    </>
+    </>}
+    </div>
   );
 }
 
