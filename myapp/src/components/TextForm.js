@@ -25,7 +25,7 @@ export default function TextForm(props) {
         props.showAlert("Converted to LowerCase","success");
     }
 
-const[text,setText] = useState('Enter text here');
+const[text,setText] = useState('');
 // text = "hello" //Wrong way to change the State
 //setText("Enter your text");  //Correct way to change the State
   return (
@@ -44,8 +44,8 @@ const[text,setText] = useState('Enter text here');
      </div>
      <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
         <h1>Your Text Summary</h1>
-        <p>{text.length>0?text.split(" ").filter((element)=>{return element.length!==0}).length:0} words and {text.length} characters.</p>
-        <p>{ text.length>0?0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length:0} Minutes read</p>
+        <p>{text.length>0?text.split(/\s+/).filter((element)=>{return element.length!==0}).length:0} words and {text.length} characters.</p>
+        <p>{ text.length>0?0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length:0} Minutes read</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:'Please enter in textbox for preview'}</p>
      </div>
