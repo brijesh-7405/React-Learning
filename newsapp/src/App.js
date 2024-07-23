@@ -10,6 +10,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import SearchBar from './components/SearchBar';
 
 export default class App extends Component {
 // constructor(){

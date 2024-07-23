@@ -60,6 +60,57 @@ export default class Navbar extends Component {
                   </Link> 
                 </li>
               </ul>
+              <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+              <div className="dropdown">
+    <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+    data-mdb-toggle="dropdown" aria-expanded="false">
+    Checkbox dropdown
+    </button>
+    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+            <a className="dropdown-item" href="/">
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="Checkme1" />
+                    <label className="form-check-label" htmlFor="Checkme1">Check me</label>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a className="dropdown-item" href="/">
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="Checkme2" />
+                    <label className="form-check-label" htmlFor="Checkme2">Check me</label>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a className="dropdown-item" href="/">
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="Checkme3" />
+                    <label className="form-check-label" htmlFor="Checkme3">Check me</label>
+                </div>
+            </a>
+        </li>
+        <li><hr className="dropdown-divider" /></li>
+        <li>
+            <a className="dropdown-item" href="/">
+                <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="Checkme4" />
+                    <label className="form-check-label" htmlFor="Checkme4">Check me</label>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
             </div>
           </div>
         </nav>
@@ -112,7 +163,7 @@ export default class Navbar extends Component {
 //               id="flexSwitchCheckDefault"
 //               onClick={props.toggleMode}
 //             />
-//             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+//             <label className="form-check-label" htmlhtmlFor="flexSwitchCheckDefault">
 //               Enable DarkMode
 //             </label>
 //           </div>
